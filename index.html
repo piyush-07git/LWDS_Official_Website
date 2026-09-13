@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="description" content="LocalWeb Digital Studio — premium websites and AI content for modern businesses. Build Online. Grow Offline.">
+<title>LocalWeb Digital Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--black:#08090b;--black2:#101216;--gold:#f6c72e;--cream:#faf6ef;--purple:#6d35d5;--purple2:#a05cf0;--navy:#171923;--muted:#a9adb8;--line:rgba(255,255,255,.1);--shadow:0 25px 80px rgba(0,0,0,.28)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Poppins,sans-serif;background:var(--black);color:#fff;line-height:1.55;overflow-x:hidden}a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}.nav{position:fixed;z-index:50;top:0;left:0;right:0;padding:16px 0;background:rgba(8,9,11,.72);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}
+.navin{display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px}.logo{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;overflow:hidden;background:#07101f;box-shadow:0 0 0 4px rgba(57,124,255,.08)}.logo img{width:100%;height:100%;object-fit:cover;display:block}.brandtxt strong{display:block;font-size:14px;letter-spacing:.5px}.brandtxt small{color:#9fa5b1;font-size:9px;letter-spacing:1.3px}.links{display:flex;gap:25px;color:#c6cad2;font-size:12px}.links a:hover{color:#fff}.navcta{padding:10px 15px;border-radius:999px;background:var(--gold);color:#111;font-weight:700;font-size:12px}.hero{min-height:100vh;display:flex;align-items:center;padding:145px 0 90px;position:relative;background:radial-gradient(circle at 78% 35%,rgba(47,93,190,.18),transparent 32%),linear-gradient(180deg,#08090b,#0c0e12)}
+.hero:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;right:-230px;top:100px;background:rgba(246,199,46,.05);filter:blur(30px)}
+.gridhero{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}.eyebrow{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:2px;margin-bottom:17px}.hero h1{font-size:clamp(42px,6vw,75px);line-height:1.02;letter-spacing:-3px;max-width:760px}.hero h1 span{color:#fff;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:5px;text-underline-offset:9px}.hero p{color:#aeb3be;max-width:570px;margin:23px 0 29px;font-size:15px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:14px 20px;border-radius:12px;font-weight:700;font-size:13px;transition:.25s}.btn.gold{background:var(--gold);color:#111}.btn.dark{border:1px solid #30333a;background:#121419}.btn:hover{transform:translateY(-3px)}
+.mockup{position:relative}.screen{background:#f3f3f3;border:9px solid #191b20;border-radius:22px;padding:10px;box-shadow:var(--shadow);transform:rotate(1deg)}.screenbar{height:16px;display:flex;gap:5px;align-items:center;padding-left:6px}.dot{width:5px;height:5px;border-radius:50%;background:#777}.demo{height:300px;border-radius:10px;background:linear-gradient(135deg,#f8efe4,#fff);color:#171717;padding:24px;position:relative;overflow:hidden}.demo:after{content:"";position:absolute;width:230px;height:230px;border-radius:50%;right:-65px;bottom:-90px;background:#f1c68d}.demo small{font-size:8px;letter-spacing:1px;color:#8b6848}.demo h3{font-size:25px;max-width:210px;line-height:1.05;margin:18px 0 12px}.demo p{color:#6d655d;font-size:8px;margin:0;max-width:210px}.demo button{margin-top:20px;border:0;background:#151515;color:#fff;border-radius:7px;padding:8px 12px;font-size:8px}.phone{position:absolute;width:115px;height:220px;right:-10px;bottom:-18px;border:6px solid #17191e;border-radius:20px;background:#fff;padding:5px;box-shadow:var(--shadow);transform:rotate(-5deg)}.phone .demo{height:100%;padding:13px}.phone .demo h3{font-size:14px;margin:10px 0}.badge{display:inline-flex;margin-top:18px;padding:8px 12px;border-radius:99px;background:#17191e;border:1px solid #343841;font-size:10px;color:#d7dae0}
+.section{padding:105px 0}.dark2{background:#0d0f13}.sectionhead{text-align:center;max-width:700px;margin:0 auto 48px}.sectionhead .eyebrow{margin-bottom:10px}.sectionhead h2{font-size:clamp(31px,4vw,48px);letter-spacing:-1.8px;line-height:1.1}.sectionhead p{color:#969ca8;margin-top:13px;font-size:14px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(145deg,#131519,#0d0f12);border:1px solid #272a30;border-radius:22px;padding:27px;position:relative;transition:.3s}.card:hover{transform:translateY(-7px);border-color:#4b4f59}.card.pop{border-color:rgba(246,199,46,.65);box-shadow:0 20px 70px rgba(246,199,46,.08)}.tag{font-size:9px;letter-spacing:1.5px;color:#a6abb6}.card h3{font-size:20px;margin:7px 0}.price{font-size:35px;font-weight:800;letter-spacing:-1.5px;margin:18px 0 19px}.price small{font-size:11px;color:#8d929c;font-weight:500}.card ul{list-style:none;color:#b9bec8;font-size:12px;display:grid;gap:11px}.card li:before{content:"✓";color:var(--gold);font-weight:800;margin-right:8px}.card .cardbtn{display:block;margin-top:23px;padding:12px;text-align:center;border-radius:10px;border:1px solid #34373e;font-size:12px;font-weight:700}.popular{position:absolute;right:18px;top:18px;background:var(--gold);color:#111;padding:5px 9px;border-radius:999px;font-size:8px;font-weight:800}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #292c32;border-radius:18px;overflow:hidden;margin-top:28px}.trust div{padding:19px;text-align:center;border-right:1px solid #292c32;color:#aeb3bd;font-size:11px}.trust div:last-child{border:0}.trust b{display:block;color:#fff;font-size:17px;margin-bottom:3px}
+.ai{background:var(--cream);color:var(--navy)}.ai .sectionhead p{color:#666976}.ai .eyebrow{color:#6d35d5}.ai .cards .card{background:#fff;border-color:#e8e0d5;box-shadow:0 15px 45px rgba(36,25,12,.08);color:var(--navy)}.ai .card.pop{border-color:#8b4fe8}.ai .tag{color:#777}.ai .card ul{color:#5e626c}.ai .card li:before{color:#7b3fe0}.ai .card .cardbtn{border-color:#ddd3c7}.rush{margin:35px 0;padding:25px 28px;border-radius:20px;background:linear-gradient(110deg,#5e2dc4,#9a55eb,#5e2dc4);background-size:200% 100%;animation:gradient 5s linear infinite;display:flex;justify-content:space-between;align-items:center;gap:20px}.rush strong{font-size:16px}.rush p{font-size:11px;opacity:.9}.rush b{font-size:20px;white-space:nowrap}@keyframes gradient{to{background-position:200% 0}}
+.features{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.feat{padding:18px;border-radius:15px;background:#fff;border:1px solid #e7ded2;text-align:center;font-size:11px;font-weight:600}.feat span{display:block;font-size:24px;margin-bottom:7px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:23px;border-top:2px solid #7540dc;background:rgba(255,255,255,.55);border-radius:0 0 16px 16px}.step b{color:#7540dc;font-size:10px;letter-spacing:1.5px}.step h3{font-size:17px;margin:7px 0}.step p{font-size:11px;color:#666}
+.goal{background:#11131a;padding:65px 0}.goalbox{display:grid;grid-template-columns:1fr 1fr;gap:20px}.goalcard{padding:32px;border:1px solid #292c34;border-radius:20px;background:linear-gradient(145deg,#151820,#0c0e12)}.goalcard h3{font-size:22px}.goalcard p{color:#9da2ad;font-size:12px;margin-top:7px}
+.contact{padding:105px 0;text-align:center;background:radial-gradient(circle at center,rgba(112,56,218,.16),transparent 45%),#0b0c10}.contact h2{font-size:clamp(36px,5vw,60px);line-height:1.05;letter-spacing:-2px}.contact p{color:#9ea4af;max-width:570px;margin:15px auto 25px;font-size:13px}.insta{display:inline-flex;align-items:center;gap:10px;border:1px solid #353943;border-radius:12px;padding:13px 17px;font-size:12px;font-weight:700;background:#11131a}.insta:hover{border-color:#7650d9}
+footer{padding:28px 0;border-top:1px solid #24272e;background:linear-gradient(90deg,#0a0c11,#171027)}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px}.foot small{color:#808692;font-size:10px}.chat{position:fixed;right:22px;bottom:22px;z-index:60}.chatbtn{width:58px;height:58px;border:0;border-radius:50%;background:linear-gradient(135deg,#f6c72e,#8b4fe8);box-shadow:0 10px 35px rgba(126,73,221,.35);font-size:24px;cursor:pointer;animation:pulse 2.5s infinite}@keyframes pulse{50%{box-shadow:0 10px 45px rgba(126,73,221,.65)}}
+.chatbox{position:absolute;right:0;bottom:70px;width:320px;background:#101217;border:1px solid #333740;border-radius:18px;overflow:hidden;box-shadow:0 25px 80px rgba(0,0,0,.5);display:none}.chatbox.open{display:block}.chathead{padding:15px;background:linear-gradient(110deg,#1d1730,#15171c);display:flex;justify-content:space-between}.chathead b{font-size:12px}.chathead small{display:block;color:#9298a4;font-size:9px}.chatbody{padding:15px}.msg{background:#1a1d24;padding:10px;border-radius:12px 12px 12px 3px;color:#d8dbe1;font-size:11px;margin-bottom:10px}.quick{display:flex;flex-wrap:wrap;gap:7px}.quick button{background:#171a21;color:#fff;border:1px solid #343842;border-radius:99px;padding:8px 10px;font-size:10px;cursor:pointer}.chatfoot{display:flex;border-top:1px solid #2a2d34}.chatfoot input{flex:1;background:#0e1014;border:0;color:#fff;padding:12px;font-size:10px;outline:none}.chatfoot button{border:0;background:var(--gold);padding:0 14px;font-weight:800}
+.reveal{opacity:0;transform:translateY(22px);transition:.7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){.links{display:none}.gridhero{grid-template-columns:1fr;gap:45px}.hero{padding-top:125px}.mockup{max-width:550px;margin:auto}.cards,.goalbox{grid-template-columns:1fr}.trust{grid-template-columns:1fr 1fr}.trust div:nth-child(2){border-right:0}.trust div:nth-child(3),.trust div:nth-child(4){border-top:1px solid #292c32}.features{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.rush{align-items:flex-start;flex-direction:column}.foot{flex-direction:column;text-align:center}}
+@media(max-width:520px){.hero h1{font-size:42px;letter-spacing:-2px}.section{padding:78px 0}.cards{gap:13px}.card{padding:22px}.trust{grid-template-columns:1fr}.trust div{border-right:0!important;border-bottom:1px solid #292c32}.trust div:last-child{border-bottom:0}.steps,.features{grid-template-columns:1fr}.chatbox{width:min(320px,calc(100vw - 30px));right:-4px}.chat{right:15px;bottom:15px}}
+
+.preview-url{margin-left:auto;color:#777;font-size:6px;letter-spacing:.3px}
+.sitepreview{height:300px;border-radius:10px;background:#090b0f;color:#fff;overflow:hidden;position:relative}
+.pvnav{height:31px;display:flex;align-items:center;gap:12px;padding:0 11px;border-bottom:1px solid rgba(255,255,255,.08);font-size:5px}
+.pvbrand{display:flex;align-items:center;gap:4px;white-space:nowrap}.pvbrand img{width:13px;height:13px;border-radius:50%;object-fit:cover}.pvbrand b{font-size:6px;letter-spacing:.3px}
+.pvlinks{display:flex;gap:8px;color:#8f95a0;flex:1;justify-content:center}.pvcta{background:#f6c72e;color:#111;padding:4px 6px;border-radius:5px;font-weight:800;font-size:4px}
+.pvhero{display:grid;grid-template-columns:1.1fr .9fr;gap:8px;padding:22px 15px 13px;background:radial-gradient(circle at 82% 30%,rgba(48,96,195,.22),transparent 40%),linear-gradient(180deg,#08090b,#10131a)}
+.pvhero small{color:#f6c72e;font-size:5px;font-weight:700;letter-spacing:1px}.pvhero h3{font-size:19px;line-height:1.02;letter-spacing:-.7px;margin:8px 0 7px;max-width:205px}.pvhero h3 em{font-style:normal;text-decoration:underline;text-decoration-color:#f6c72e;text-underline-offset:2px}.pvhero p{font-size:5.8px;color:#9ea4af;line-height:1.5;max-width:190px;margin:0}
+.pvbuttons{display:flex;gap:5px;align-items:center;margin-top:10px;font-size:4.8px}.pvbuttons b{background:#f6c72e;color:#111;border-radius:4px;padding:5px 7px}.pvbuttons span{border:1px solid #30343c;border-radius:4px;padding:4px 6px;color:#d1d4da}
+.pvvisual{position:relative;display:grid;place-items:center}.pvcard{width:110px;height:135px;border:1px solid #343943;border-radius:12px;padding:13px;background:linear-gradient(145deg,#171a22,#0c0e12);box-shadow:0 16px 35px rgba(0,0,0,.4);display:flex;flex-direction:column;justify-content:center}.pvcard strong{font-size:4px;letter-spacing:1px;color:#f6c72e}.pvcard b{font-size:14px;line-height:1.05;margin:7px 0}.pvcard span{font-size:4.5px;color:#8f95a0}.pvfloat{position:absolute;right:0;bottom:10px;background:linear-gradient(135deg,#5e2dc4,#8b4fe8);padding:6px 8px;border-radius:99px;font-size:4.5px;font-weight:800;box-shadow:0 7px 20px rgba(110,50,220,.3)}
+.pvstats{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;padding:8px 12px;background:#0d1015;border-top:1px solid #252932}.pvstats span{font-size:4.5px;color:#8f95a0}.pvstats b{display:block;color:#fff;font-size:7px;margin-bottom:2px}
+.mobilepreview{height:100%;border-radius:13px;background:#08090b;color:#fff;padding:8px;overflow:hidden;position:relative}.mbar{display:flex;justify-content:space-between;font-size:5px;color:#8d929c;margin-bottom:8px}.mbar i{width:20px;height:5px;border-radius:99px;background:#1b1f27}
+.mbrand{display:flex;align-items:center;gap:4px;font-size:6px;margin-bottom:14px}.mbrand img{width:16px;height:16px;border-radius:50%;object-fit:cover}.mbrand b{font-size:6px;letter-spacing:.4px;flex:1}.mbrand span{color:#f6c72e;font-size:9px}
+.mobilepreview>small{font-size:4px;color:#f6c72e;letter-spacing:.8px}.mobilepreview h3{font-size:16px;line-height:1.04;margin:6px 0;letter-spacing:-.4px}.mobilepreview h3 em{font-style:normal;color:#62a4ff}.mobilepreview>p{font-size:5.5px;color:#9298a4;line-height:1.5;margin:0 0 9px}.mcta{background:#f6c72e;color:#111;padding:6px;text-align:center;border-radius:5px;font-size:5px;font-weight:800}.mfeature{margin-top:7px;padding:7px;border:1px solid #292d35;border-radius:6px;background:#12151b}.mfeature b{font-size:8px;display:block}.mfeature span{font-size:4.5px;color:#8e94a0}
+
+.chatbtn{position:relative}.chatbtn:after{content:"";position:absolute;right:-1px;top:-1px;width:10px;height:10px;border-radius:50%;background:#37d67a;border:2px solid #0b0c10}
+.chatbox{width:355px;background:#0b0e14;border:1px solid rgba(255,255,255,.13);border-radius:22px;box-shadow:0 30px 100px rgba(0,0,0,.65);backdrop-filter:blur(20px)}
+.chathead{padding:16px 17px;background:linear-gradient(120deg,#151a28,#171028);border-bottom:1px solid rgba(255,255,255,.08);align-items:center}
+.chatidentity{display:flex;align-items:center;gap:10px}.chatavatar{width:35px;height:35px;border-radius:12px;overflow:hidden;background:#07101f;box-shadow:0 0 0 1px rgba(255,255,255,.12)}.chatavatar img{width:100%;height:100%;object-fit:cover}.chathead b{font-size:12px}.chathead small{font-size:9px}.online{color:#62e39a;font-size:8px;margin-top:2px}.chatclose{background:none;border:0;color:#9da3af;cursor:pointer;font-size:18px}
+.chatbody{height:310px;overflow:auto;padding:15px;background:radial-gradient(circle at 100% 0,rgba(108,55,213,.12),transparent 35%),#0b0e14}
+.msg{max-width:90%;line-height:1.5;border-radius:14px 14px 14px 4px;border:1px solid #282d37;background:#151922;padding:10px 11px;color:#dce0e7;font-size:10.5px}.msg.user{margin-left:auto;border-radius:14px 14px 4px 14px;background:#242033;border-color:#3b3159}.typing{display:flex;gap:4px;align-items:center;width:max-content}.typing i{width:4px;height:4px;background:#8e95a3;border-radius:50%;animation:typing 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}@keyframes typing{50%{transform:translateY(-3px);opacity:.5}}
+.quick{gap:6px;margin-top:5px}.quick button{border-color:#393f4b;background:#12161e;transition:.2s}.quick button:hover{border-color:#6d35d5;transform:translateY(-1px)}
+.chatfoot{background:#0a0d12}.chatfoot input{font-size:10px}.chatfoot button{background:linear-gradient(135deg,#f6c72e,#e7ae17);cursor:pointer}
+</style>
+<link rel="icon" type="image/png" href="assets/localweb-lw-logo.png">
+</head>
+<body>
+<nav class="nav"><div class="container navin">
+<a href="#home" class="brand"><div class="logo"><img src="assets/localweb-lw-logo.png" alt="LocalWeb LW logo"></div><div class="brandtxt"><strong>LOCALWEB DIGITAL STUDIO</strong><small>⭐BUILD ONLINE. GROW OFFLINE.</small></div></a>
+<div class="links"><a href="#web">Websites</a><a href="#content">AI Content</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
+<a class="navcta" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">DM ON INSTAGRAM</a>
+</div></nav>
+
+<main id="home">
+<section class="hero"><div class="container gridhero">
+<div class="reveal"><div class="eyebrow">01 / DIGITAL PRESENCE</div><h1>Turn your business into a <span>professional online presence.</span></h1><p>Modern websites and high-quality AI content designed to make your business look credible, memorable and ready for more customers — without making things complicated.</p><div class="actions"><a class="btn gold" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">Start a Project ↗</a><a class="btn dark" href="#web">Explore Services</a></div><div class="badge">✦ Simple. Professional. Affordable.</div></div>
+<div class="mockup reveal">
+  <div class="screen">
+    <div class="screenbar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="preview-url">localwebdigitalstudio.in</span></div>
+    <div class="sitepreview">
+      <div class="pvnav"><div class="pvbrand"><img src="assets/localweb-lw-logo.png" alt=""><b>LOCALWEB</b></div><div class="pvlinks"><span>Websites</span><span>AI Content</span><span>Process</span><span>Contact</span></div><div class="pvcta">START A PROJECT</div></div>
+      <div class="pvhero"><div><small>01 / DIGITAL PRESENCE</small><h3>Turn your business into a <em>professional online presence.</em></h3><p>Modern websites and high-quality AI content designed to make your business look credible and memorable.</p><div class="pvbuttons"><b>Start a Project ↗</b><span>Explore Services</span></div></div><div class="pvvisual"><div class="pvcard"><strong>BUSINESS WEBSITE</strong><b>Made to look<br>like your brand.</b><span>Mobile-first • Premium • Fast</span></div><div class="pvfloat">✦ PREMIUM</div></div></div>
+      <div class="pvstats"><span><b>₹2,499</b>Website starting</span><span><b>AI CONTENT</b>Monthly service</span><span><b>INSTAGRAM</b>Direct enquiry</span></div>
+    </div>
+  </div>
+  <div class="phone">
+    <div class="mobilepreview">
+      <div class="mbar"><span>9:41</span><i></i></div>
+      <div class="mbrand"><img src="assets/localweb-lw-logo.png" alt=""><b>LOCALWEB</b><span>☰</span></div>
+      <small>01 / DIGITAL PRESENCE</small>
+      <h3>Build your <em>professional</em> online presence.</h3>
+      <p>Websites + AI content for modern businesses.</p>
+      <div class="mcta">START A PROJECT ↗</div>
+      <div class="mfeature"><b>₹2,499</b><span>Website starting from</span></div>
+      <div class="mfeature"><b>AI CONTENT</b><span>Monthly content plans</span></div>
+    </div>
+  </div>
+</div>
+</div></section>
+
+<section id="web" class="section dark2"><div class="container"><div class="sectionhead reveal"><div class="eyebrow">WEBSITE DESIGN</div><h2>Your business deserves better than a basic template.</h2><p>Choose a starting point. We shape the design around your business, brand and customers.</p></div>
+<div class="cards">
+<article class="card reveal"><div class="tag">01 / STARTER ----> Get Online</div><h3>Basic</h3><div class="price">₹2,499 <small>O N E - T I M E</small></div><ul><li>1-page professional website</li><li>Mobile-friendly design</li><li>Business information</li><li>WhatsApp / call-ready CTA</li><li>Google Maps & contact section</li><li>Photo gallery</li></ul><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">Ask on Instagram →</a></article>
+<article class="card pop reveal"><div class="popular">MOST POPULAR</div><div class="tag">02 / BUSINESS ----> Build Your Presence</div><h3>Business</h3><div class="price">₹3,499 <small>O N E - T I M E</small></div><ul><li>Multiple sections</li><li>Products / services showcase</li><li>Reviews / social proof</li><li>Better customization</li><li>Basic SEO setup</li><li>Social integration</li></ul><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">Ask on Instagram →</a></article>
+<article class="card reveal"><div class="tag">03 / PRO ----> Market Ready</div><h3>Elite</h3><div class="price">₹4,999 <small>O N E - T I M E</small></div><ul><li>Premium custom design</li><li>Advanced motion & interactions</li><li>Installable app-like experience</li><li>Priority customization</li><li>Conversion-focused layout</li><li>Premium visual polish</li></ul><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">Ask on Instagram →</a></article>
+</div>
+<div class="trust reveal"><div><b>01</b>Mobile-first</div><div><b>02</b>Brand-led design</div><div><b>03</b>Clear pricing</div><div><b>04</b>Direct Instagram contact</div></div>
+</div></section>
+
+<section id="content" class="section ai"><div class="container"><div class="sectionhead reveal"><div class="eyebrow">02 / CONTENT MARKETING</div><h2>Professional product content. Made simple.</h2><p>AI-assisted visuals for Instagram, promotions, launches and WhatsApp marketing — without needing a full content team.</p></div>
+<div class="cards">
+<article class="card reveal"><div class="tag">01 / CONTENT START</div><h3>Start</h3><div class="price">₹499 <small>/ m o n t h</small></div><ul><li>6 product images</li><li>2 short videos (10 sec)</li><li>Social-ready formats</li><li>Basic support</li></ul><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">DM to Start →</a></article>
+<article class="card pop reveal"><div class="popular">MOST POPULAR</div><div class="tag">02 / CONTENT GROW</div><h3>Grow</h3><div class="price">₹799 <small>/ m o n t h</small></div><ul><li>10 product images</li><li>4 short videos</li><li>Social-ready formats</li><li>Better content variety</li></ul><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">DM to Start →</a></article>
+<article class="card reveal"><div class="tag">03 / CONTENT PRO</div><h3>Pro</h3><div class="price">₹1,499 <small>/ m o n t h</small></div><ul><li>20 product images</li><li>10 short videos</li><li>Campaign-ready variety</li><li>Priority content support</li></ul><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">DM to Start →</a></article>
+</div>
+<div class="rush reveal"><div><strong>⚡ Need it faster?</strong><p>Add rush delivery to any plan, anytime.</p></div><b>₹99 / image &nbsp; • &nbsp; ₹149 / video</b></div>
+<div class="features reveal"><div class="feat"><span>🚀</span>Product Launches</div><div class="feat"><span>📱</span>Instagram Posts</div><div class="feat"><span>🎬</span>Reels & Shorts</div><div class="feat"><span>✨</span>Festivals & Promos</div><div class="feat"><span>💬</span>WhatsApp Marketing</div></div>
+</div></section>
+
+<section id="process" class="section ai" style="padding-top:10px"><div class="container"><div class="sectionhead reveal"><div class="eyebrow">HOW IT WORKS</div><h2>From idea to ready-to-use.</h2></div><div class="steps"><div class="step reveal"><b>01 / SHARE</b><h3>Send details</h3><p>Share your business info, photos, products and goals.</p></div><div class="step reveal"><b>02 / CREATE</b><h3>We build</h3><p>We turn your inputs into polished web or content assets.</p></div><div class="step reveal"><b>03 / REVIEW</b><h3>You review</h3><p>Check the work and collect the final content or website.</p></div><div class="step reveal"><b>04 / USE</b><h3>Go live</h3><p>Put it on your website, Instagram, WhatsApp or campaigns.</p></div></div></div></section>
+
+<section class="goal"><div class="container"><div class="sectionhead reveal"><div class="eyebrow">ONE STUDIO. TWO CORE SERVICES.</div><h2>Everything built around one goal: make your business look ready for growth.</h2></div><div class="goalbox"><div class="goalcard reveal"><h3>🌐 Website Design</h3><p>One-time investment. A professional digital home for your business.</p></div><div class="goalcard reveal"><h3>✦ AI Content Creator</h3><p>Monthly service. Consistent content without the complexity of a full production setup.</p></div></div></div></section>
+
+<section id="contact" class="contact"><div class="container reveal"><div class="eyebrow">READY WHEN YOU ARE</div><h2>Let’s build something your customers remember.</h2><p>No phone calls or complicated forms. Just send us a DM on Instagram with your business name and what you need.</p><a class="insta" href="https://www.instagram.com/localwebstudio7.in/" target="_blank"> @localwebstudio7.in &nbsp; → Send a DM</a></div></section>
+</main>
+
+<footer><div class="container foot"><div class="brand"><div class="logo"><img src="assets/localweb-lw-logo.png" alt="LocalWeb LW logo"></div><div class="brandtxt"><strong>LOCALWEB DIGITAL STUDIO</strong><small>WEB DESIGN • AI CONTENT • DIGITAL SOLUTIONS</small></div></div><small>© 2026 LocalWeb Digital Studio. All rights reserved.</small></div></footer>
+
+<div class="chat"><div class="chatbox" id="chatbox">
+<div class="chathead"><div class="chatidentity"><div class="chatavatar"><img src="assets/localweb-lw-logo.png" alt=""></div><div><b>LocalWeb Assistant</b><small>Business & service assistant</small><div class="online">● Online • Replies instantly</div></div></div><button class="chatclose" onclick="toggleChat()" aria-label="Close">×</button></div>
+<div class="chatbody" id="chatbody"><div class="msg">Hi! 👋 I’m the LocalWeb assistant. Ask me about <b>website plans, AI content, pricing, features, process, delivery, rush service, revisions</b> or what plan fits your business.</div><div class="quick"><button onclick="bot('website')">Website plans</button><button onclick="bot('content')">AI Content</button><button onclick="bot('process')">How it works</button><button onclick="bot('recommend')">Recommend a plan</button></div></div>
+<div class="chatfoot"><input id="chatinput" placeholder="Ask about LocalWeb…"><button onclick="sendChat()">→</button></div></div><button class="chatbtn" onclick="toggleChat()" aria-label="Open LocalWeb Assistant">✦</button></div>
+
+<script>
+const ig='https://www.instagram.com/localwebstudio7.in/';
+const answers={
+website:'<b>Website Design</b><br>Basic ₹2,499 • Business ₹3,499 • Elite ₹4,999 — all one-time. Business is a strong choice if you need a fuller professional presence.',
+content:'<b>AI Content</b><br>Start ₹499/mo • Grow ₹799/mo • Pro ₹1,499/mo. Plans include the listed monthly images/videos and social-ready content.',
+both:'<b>Website + AI Content</b><br>You can combine a one-time website plan with any monthly content plan. Tell me your business type and goal, and I can suggest a suitable combination.',
+process:'<b>How it works</b><br>01 Share your business details → 02 We create → 03 You review → 04 You use/go live. Simple and direct.',
+recommend:'<b>Quick recommendation</b><br>For most growing businesses, the <b>Business ₹3,499</b> website plan is a balanced starting point. For ongoing marketing, add an AI Content plan.',
+rush:'<b>Rush delivery</b><br>The current site lists rush delivery as an add-on: ₹99/image and ₹149/video.',
+contact:'<b>Contact</b><br>LocalWeb currently handles enquiries through Instagram only. <a href="'+ig+'" target="_blank" style="color:#f6c72e">DM @localwebstudio7.in →</a>',
+revisions:'<b>Revisions</b><br>For detailed revision or redesign questions, please DM us on Instagram so the exact requirement can be confirmed before work starts.',
+payment:'<b>Payment</b><br>For payment terms or a custom requirement, please DM us on Instagram. The website does not promise terms that are not listed.',
+}
+function toggleChat(){document.getElementById('chatbox').classList.toggle('open')}
+function add(text,user=false){let b=document.getElementById('chatbody');let d=document.createElement('div');d.className='msg'+(user?' user':'');d.innerHTML=text;b.appendChild(d);b.scrollTop=b.scrollHeight}
+function typing(){let b=document.getElementById('chatbody');let d=document.createElement('div');d.className='msg typing';d.id='typing';d.innerHTML='<i></i><i></i><i></i>';b.appendChild(d);b.scrollTop=b.scrollHeight}
+function bot(type){add(answers[type]||answers.contact);document.getElementById('chatbody').scrollTop=document.getElementById('chatbody').scrollHeight}
+function classify(q){
+ let x=q.toLowerCase();
+ if(/rush|urgent|fast|express|quickly/.test(x))return'rush';
+ if(/revision|change|edit|redesign/.test(x))return'revisions';
+ if(/payment|pay|advance|installment|upi/.test(x))return'payment';
+ if(/contact|instagram|dm|talk|reach|book|start|enquir/.test(x))return'contact';
+ if(/both|website.*content|content.*website/.test(x))return'both';
+ if(/how.*work|process|steps|procedure/.test(x))return'process';
+ if(/recommend|which.*plan|best.*plan|suggest|suitable|right plan/.test(x))return'recommend';
+ if(/content|image|images|video|videos|reel|reels|monthly|499|799|1499/.test(x))return'content';
+ if(/website|site|web|2499|3499|4999|price|pricing|cost|rate|package|plan/.test(x))return'website';
+ return null;
+}
+function sendChat(){
+ let i=document.getElementById('chatinput'),q=i.value.trim();if(!q)return;
+ add('<b>You:</b> '+q.replace(/[<>]/g,''),true);i.value='';
+ typing();
+ setTimeout(()=>{document.getElementById('typing')?.remove();let type=classify(q);
+ if(type) add(answers[type]); else add('I can answer questions about LocalWeb’s <b>website plans, AI content plans, pricing, features, process, rush service and contact</b>. If your question is specific to your business, <a href="'+ig+'" target="_blank" style="color:#f6c72e">DM us on Instagram</a> and we’ll help you directly.');},500);
+}
+document.getElementById('chatinput').addEventListener('keydown',e=>{if(e.key==='Enter')sendChat()});
+document.querySelectorAll('.reveal').forEach(el=>{new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12}).observe(el)});
+</script>
+</body>
+</html>
