@@ -51,13 +51,130 @@ footer{padding:28px 0;border-top:1px solid #24272e;background:linear-gradient(90
 .msg{max-width:90%;line-height:1.5;border-radius:14px 14px 14px 4px;border:1px solid #282d37;background:#151922;padding:10px 11px;color:#dce0e7;font-size:10.5px}.msg.user{margin-left:auto;border-radius:14px 14px 4px 14px;background:#242033;border-color:#3b3159}.typing{display:flex;gap:4px;align-items:center;width:max-content}.typing i{width:4px;height:4px;background:#8e95a3;border-radius:50%;animation:typing 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}@keyframes typing{50%{transform:translateY(-3px);opacity:.5}}
 .quick{gap:6px;margin-top:5px}.quick button{border-color:#393f4b;background:#12161e;transition:.2s}.quick button:hover{border-color:#6d35d5;transform:translateY(-1px)}
 .chatfoot{background:#0a0d12}.chatfoot input{font-size:10px}.chatfoot button{background:linear-gradient(135deg,#f6c72e,#e7ae17);cursor:pointer}
+
+/* FREE WEBSITE CONCEPT — added without changing existing sections */
+.concept{background:#0a0c11;padding:105px 0;border-top:1px solid rgba(255,255,255,.05)}
+.concept-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch}
+.concept-copy,.concept-form{border:1px solid #292d35;border-radius:24px;background:linear-gradient(145deg,#12151c,#0c0e12);box-shadow:0 20px 70px rgba(0,0,0,.22)}
+.concept-copy{padding:38px}
+.concept-copy h2{font-size:clamp(32px,4vw,50px);line-height:1.06;letter-spacing:-2px;margin:8px 0 15px}
+.concept-copy p{color:#a1a6b1;font-size:13px;max-width:570px}
+.concept-points{display:grid;gap:11px;margin-top:25px}
+.concept-point{display:flex;gap:11px;align-items:flex-start;color:#cdd1d8;font-size:12px}
+.concept-point b{color:var(--gold)}
+.concept-note{margin-top:25px;padding:13px 15px;border:1px solid #2b3038;border-radius:12px;color:#8f96a2;font-size:10px;line-height:1.55}
+.concept-form{padding:27px}
+.concept-form h3{font-size:21px;margin-bottom:5px}
+.concept-form>p{color:#8f96a2;font-size:10px;margin-bottom:20px}
+.cfield{margin-bottom:13px}
+.cfield label{display:block;color:#cdd1d8;font-size:10px;font-weight:600;margin-bottom:6px}
+.cfield input,.cfield select,.cfield textarea{width:100%;border:1px solid #30353e;background:#0b0e13;color:#fff;border-radius:10px;padding:11px 12px;font:inherit;font-size:11px;outline:none}
+.cfield input:focus,.cfield select:focus,.cfield textarea:focus{border-color:#6d35d5;box-shadow:0 0 0 3px rgba(109,53,213,.12)}
+.cfield textarea{min-height:80px;resize:vertical}
+.concept-submit{width:100%;border:0;border-radius:11px;padding:13px 15px;background:var(--gold);color:#111;font:inherit;font-size:12px;font-weight:800;cursor:pointer;transition:.2s}
+.concept-submit:hover{transform:translateY(-2px)}
+.concept-privacy{color:#747b87;font-size:8.5px;line-height:1.55;margin-top:10px;text-align:center}
+.concept-result{display:none;margin-top:12px;padding:12px;border-radius:10px;border:1px solid rgba(246,199,46,.35);background:rgba(246,199,46,.06);color:#dce0e7;font-size:10px;line-height:1.5}
+.concept-result.show{display:block}
+.concept-mini{display:inline-flex;margin-top:20px;padding:8px 11px;border-radius:99px;background:#171a21;border:1px solid #30343c;color:#cdd1d8;font-size:9px;font-weight:700}
+@media(max-width:850px){.concept-grid{grid-template-columns:1fr}.concept-copy{padding:28px}.concept-form{padding:22px}}
+@media(max-width:520px){.concept{padding:78px 0}.concept-copy h2{font-size:35px;letter-spacing:-1.5px}.concept-copy p{font-size:12px}.concept-form h3{font-size:19px}}
+
+
+/* MOBILE FIT FIX — keeps the existing design, prevents clipped right-side content */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+body{min-width:0}
+img,video,iframe{max-width:100%}
+.container{max-width:100%;min-width:0}
+.navin,.brand,.actions,.foot,.concept-grid,.gridhero,.cards,.trust,.features,.steps,.goalbox,.rush{min-width:0}
+@media(max-width:850px){
+  .container{width:calc(100% - 28px);max-width:none}
+  .hero{min-height:auto;width:100%;padding:112px 0 64px}
+  .gridhero{grid-template-columns:minmax(0,1fr);width:100%;gap:34px}
+  .hero h1{max-width:100%;overflow-wrap:anywhere}
+  .hero p{max-width:100%}
+  .mockup{width:100%;max-width:100%;min-width:0;overflow:visible}
+  .screen{width:100%;max-width:100%;padding:7px;border-width:6px;transform:none}
+  .sitepreview{width:100%;height:auto;min-height:245px}
+  .pvnav{padding:0 8px;gap:7px}
+  .pvlinks{gap:5px}
+  .pvhero{padding:18px 11px 11px;grid-template-columns:minmax(0,1fr) minmax(90px,.65fr)}
+  .pvhero h3{max-width:100%;font-size:clamp(15px,4.6vw,19px)}
+  .pvhero p{max-width:100%}
+  .pvvisual{min-width:0}
+  .pvcard{max-width:100%}
+  .phone{right:2px;bottom:-14px;width:94px;height:190px}
+  .section,.contact,.concept{width:100%;overflow:hidden}
+  .cards,.goalbox,.concept-grid{width:100%;min-width:0}
+  .card,.goalcard,.concept-copy,.concept-form{min-width:0;max-width:100%}
+  .price{font-size:32px}
+  .trust,.features,.steps{width:100%}
+  .rush{width:100%;min-width:0}
+  .chat{right:10px;bottom:10px;max-width:calc(100vw - 20px)}
+  .chatbox{right:0;bottom:68px;width:min(390px,calc(100vw - 20px));max-width:calc(100vw - 20px);height:min(74vh,590px);max-height:590px}
+  .chatbody{height:calc(min(74vh,590px) - 126px);min-height:280px}
+  .chatbtn{width:56px;height:56px}
+}
+@media(max-width:520px){
+  .container{width:calc(100% - 22px)}
+  .nav{padding:10px 0}
+  .brand{gap:8px;min-width:0}
+  .logo{width:38px;height:38px;flex:0 0 38px}
+  .brandtxt{min-width:0}
+  .brandtxt strong{font-size:11px;white-space:nowrap}
+  .brandtxt small{font-size:7px;letter-spacing:.8px;white-space:nowrap}
+  .navcta{padding:8px 10px;font-size:9px;white-space:nowrap}
+  .hero{padding-top:105px}
+  .hero h1{font-size:clamp(34px,10.5vw,42px);line-height:1.04;letter-spacing:-1.7px}
+  .hero p{font-size:13px}
+  .actions{width:100%}
+  .btn{padding:12px 14px;font-size:11px}
+  .sitepreview{min-height:225px}
+  .pvlinks{display:none}
+  .pvhero{grid-template-columns:1fr .56fr;gap:5px}
+  .pvhero h3{font-size:15px}
+  .pvhero p{font-size:5px}
+  .pvcard{width:82px;height:110px;padding:9px}
+  .pvcard b{font-size:11px}
+  .pvstats{grid-template-columns:1fr 1fr 1fr;padding:7px 6px}
+  .phone{width:82px;height:166px;right:1px;bottom:-9px;border-width:5px}
+  .mobilepreview h3{font-size:13px}
+  .mobilepreview>p{font-size:5px}
+  .section{padding:68px 0}
+  .sectionhead{margin-bottom:32px}
+  .sectionhead h2{font-size:clamp(29px,8.5vw,40px)}
+  .card{padding:20px;border-radius:18px}
+  .price{font-size:30px}
+  .card ul{font-size:11px}
+  .concept-copy{padding:24px}
+  .concept-copy h2{font-size:32px}
+  .concept-form{padding:20px}
+  .chat{right:8px;bottom:8px}
+  .chatbox{width:calc(100vw - 16px);max-width:calc(100vw - 16px);right:0;border-radius:18px}
+  .chatbody{padding:14px;min-height:270px}
+  .msg{font-size:11.5px;padding:11px 12px;line-height:1.55}
+  .quick button{font-size:10.5px;padding:9px 11px}
+  .chatfoot input{font-size:11px;padding:13px}
+}
+@media(max-width:360px){
+  .brandtxt strong{font-size:10px}
+  .brandtxt small{font-size:6px}
+  .navcta{font-size:8px;padding:7px 8px}
+  .container{width:calc(100% - 18px)}
+  .phone{display:none}
+  .sitepreview{min-height:210px}
+  .pvhero{grid-template-columns:1fr}
+  .pvvisual{display:none}
+  .chatbox{width:calc(100vw - 12px);max-width:calc(100vw - 12px)}
+}
+
 </style>
 <link rel="icon" type="image/png" href="assets/localweb-lw-logo.png">
 </head>
 <body>
 <nav class="nav"><div class="container navin">
 <a href="#home" class="brand"><div class="logo"><img src="assets/localweb-lw-logo.png" alt="LocalWeb LW logo"></div><div class="brandtxt"><strong>LOCALWEB DIGITAL STUDIO</strong><small>⭐BUILD ONLINE. GROW OFFLINE.</small></div></a>
-<div class="links"><a href="#web">Websites</a><a href="#content">AI Content</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
+<div class="links"><a href="#web">Websites</a><a href="#content">AI Content</a><a href="#concept">Free Concept</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
 <a class="navcta" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">DM ON INSTAGRAM</a>
 </div></nav>
 
@@ -111,6 +228,65 @@ footer{padding:28px 0;border-top:1px solid #24272e;background:linear-gradient(90
 
 <section class="goal"><div class="container"><div class="sectionhead reveal"><div class="eyebrow">ONE STUDIO. TWO CORE SERVICES.</div><h2>Everything built around one goal: make your business look ready for growth.</h2></div><div class="goalbox"><div class="goalcard reveal"><h3>🌐 Website Design</h3><p>One-time investment. A professional digital home for your business.</p></div><div class="goalcard reveal"><h3>✦ AI Content Creator</h3><p>Monthly service. Consistent content without the complexity of a full production setup.</p></div></div></div></section>
 
+
+<section id="concept" class="concept">
+  <div class="container">
+    <div class="concept-grid">
+      <div class="concept-copy reveal">
+        <div class="eyebrow">03 / FREE WEBSITE CONCEPT</div>
+        <h2>See how your business could look online — before you pay.</h2>
+        <p>Share a few basic business details and we’ll use them to understand your brand and prepare a <b>visual website concept</b>. This is a concept preview — not a full free website.</p>
+        <div class="concept-points">
+          <div class="concept-point"><b>01</b><span><strong>Visual concept only</strong> — a homepage-style preview to show the design direction.</span></div>
+          <div class="concept-point"><b>02</b><span><strong>No payment required</strong> to request the concept.</span></div>
+          <div class="concept-point"><b>03</b><span><strong>No sensitive information</strong> — only basic business details are requested.</span></div>
+        </div>
+        <div class="concept-note">Your information should only be used for your concept request and related LocalWeb communication. Never submit passwords, OTPs, payment details or other sensitive information.</div>
+        <span class="concept-mini">✦ No full website is included in the free concept</span>
+      </div>
+
+      <form class="concept-form reveal" id="conceptForm" onsubmit="submitConcept(event)">
+        <h3>Get Your Free Concept</h3>
+        <p>Tell us a little about your business. Keep it simple.</p>
+
+        <div class="cfield">
+          <label for="conceptBusiness">Business name *</label>
+          <input id="conceptBusiness" name="business" required maxlength="80" placeholder="e.g. Sharma Bakery">
+        </div>
+
+        <div class="cfield">
+          <label for="conceptType">Business type *</label>
+          <input id="conceptType" name="type" required maxlength="60" placeholder="e.g. Bakery, Gym, Salon">
+        </div>
+
+        <div class="cfield">
+          <label for="conceptLink">Instagram / current website</label>
+          <input id="conceptLink" name="link" maxlength="160" placeholder="@yourbusiness or website link">
+        </div>
+
+        <div class="cfield">
+          <label for="conceptNeed">What do you need? *</label>
+          <select id="conceptNeed" name="need" required>
+            <option value="">Select one</option>
+            <option>Website</option>
+            <option>AI Content</option>
+            <option>Both</option>
+          </select>
+        </div>
+
+        <div class="cfield">
+          <label for="conceptMessage">Anything you want us to know?</label>
+          <textarea id="conceptMessage" name="message" maxlength="500" placeholder="Products, services, style you like, or anything important..."></textarea>
+        </div>
+
+        <button class="concept-submit" type="submit">REQUEST MY FREE CONCEPT ↗</button>
+        <div class="concept-result" id="conceptResult"></div>
+        <div class="concept-privacy">By submitting, you’re sharing basic business information for your LocalWeb concept request. No passwords, OTPs, payment details or sensitive personal data are requested.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="contact"><div class="container reveal"><div class="eyebrow">READY WHEN YOU ARE</div><h2>Let’s build something your customers remember.</h2><p>No phone calls or complicated forms. Just send us a DM on Instagram with your business name and what you need.</p><a class="insta" href="https://www.instagram.com/localwebstudio7.in/" target="_blank"> @localwebstudio7.in &nbsp; → Send a DM</a></div></section>
 </main>
 
@@ -118,21 +294,29 @@ footer{padding:28px 0;border-top:1px solid #24272e;background:linear-gradient(90
 
 <div class="chat"><div class="chatbox" id="chatbox">
 <div class="chathead"><div class="chatidentity"><div class="chatavatar"><img src="assets/localweb-lw-logo.png" alt=""></div><div><b>LocalWeb Assistant</b><small>Business & service assistant</small><div class="online">● Online • Replies instantly</div></div></div><button class="chatclose" onclick="toggleChat()" aria-label="Close">×</button></div>
-<div class="chatbody" id="chatbody"><div class="msg">Hi! 👋 I’m the LocalWeb assistant. Ask me about <b>website plans, AI content, pricing, features, process, delivery, rush service, revisions</b> or what plan fits your business.</div><div class="quick"><button onclick="bot('website')">Website plans</button><button onclick="bot('content')">AI Content</button><button onclick="bot('process')">How it works</button><button onclick="bot('recommend')">Recommend a plan</button></div></div>
+<div class="chatbody" id="chatbody"><div class="msg">Hi! 👋 I’m the LocalWeb assistant. Ask me about <b>website plans, AI content, pricing, features, process, delivery, rush service, revisions</b> or what plan fits your business.</div><div class="quick"><button onclick="bot('website')">Website plans</button><button onclick="bot('content')">AI Content</button><button onclick="bot('recommend')">Recommend a plan</button><button onclick="bot('concept')">Free Concept</button><button onclick="bot('features')">Features</button><button onclick="bot('mobile')">Mobile</button></div></div>
 <div class="chatfoot"><input id="chatinput" placeholder="Ask about LocalWeb…"><button onclick="sendChat()">→</button></div></div><button class="chatbtn" onclick="toggleChat()" aria-label="Open LocalWeb Assistant">✦</button></div>
 
 <script>
 const ig='https://www.instagram.com/localwebstudio7.in/';
 const answers={
-website:'<b>Website Design</b><br>Basic ₹2,499 • Business ₹3,499 • Elite ₹4,999 — all one-time. Business is a strong choice if you need a fuller professional presence.',
-content:'<b>AI Content</b><br>Start ₹499/mo • Grow ₹799/mo • Pro ₹1,499/mo. Plans include the listed monthly images/videos and social-ready content.',
-both:'<b>Website + AI Content</b><br>You can combine a one-time website plan with any monthly content plan. Tell me your business type and goal, and I can suggest a suitable combination.',
-process:'<b>How it works</b><br>01 Share your business details → 02 We create → 03 You review → 04 You use/go live. Simple and direct.',
-recommend:'<b>Quick recommendation</b><br>For most growing businesses, the <b>Business ₹3,499</b> website plan is a balanced starting point. For ongoing marketing, add an AI Content plan.',
+website:'<b>Website Design</b><br>We currently offer Basic ₹2,499, Business ₹3,499 and Elite ₹4,999 — one-time plans. Business is a strong all-round choice for a growing business.',
+content:'<b>AI Content</b><br>Start ₹499/mo • Grow ₹799/mo • Pro ₹1,499/mo. Each plan includes the listed monthly images/videos and social-ready content.',
+both:'<b>Website + AI Content</b><br>You can combine any one-time website plan with a monthly AI Content plan. If you tell me your business type and goal, I can suggest a practical combination.',
+process:'<b>How it works</b><br>01 Share your business details → 02 We create → 03 You review → 04 You use/go live. The process is kept simple.',
+recommend:'<b>Quick recommendation</b><br>For a business that needs a complete professional presence, I’d usually start with <b>Business ₹3,499</b>. If you want a more premium custom experience, consider <b>Elite ₹4,999</b>. Add AI Content if you also need ongoing social content.',
+concept:'<b>Free Website Concept</b><br>You can request a <b>visual concept</b> before paying. It is a design preview, not a complete free website. Share basic business details through the Free Concept section, then continue the request on Instagram.',
+mobile:'<b>Mobile-first</b><br>The website is designed to work across phone, tablet and desktop. The mobile layout is built to fit the screen without requiring zoom-out.',
+features:'<b>Website features</b><br>Depending on the plan: responsive design, business information, product/service showcase, reviews/social proof, basic SEO, social integration, Google Maps/contact section and premium interactions.',
+seo:'<b>SEO</b><br>The Business plan includes basic SEO setup. For specific SEO goals or ongoing optimisation, please DM us on Instagram so the exact requirement can be confirmed.',
+pwa:'<b>Installable experience</b><br>The Elite plan includes an installable app-like experience. If you want a full PWA-style requirement, tell us what you need and we can confirm the scope on Instagram.',
+delivery:'<b>Delivery</b><br>We keep the process straightforward. Exact delivery timing depends on the project scope and how quickly the required content/details are provided, so we don’t promise a fixed timeline here.',
 rush:'<b>Rush delivery</b><br>The current site lists rush delivery as an add-on: ₹99/image and ₹149/video.',
-contact:'<b>Contact</b><br>LocalWeb currently handles enquiries through Instagram only. <a href="'+ig+'" target="_blank" style="color:#f6c72e">DM @localwebstudio7.in →</a>',
-revisions:'<b>Revisions</b><br>For detailed revision or redesign questions, please DM us on Instagram so the exact requirement can be confirmed before work starts.',
-payment:'<b>Payment</b><br>For payment terms or a custom requirement, please DM us on Instagram. The website does not promise terms that are not listed.',
+revisions:'<b>Revisions</b><br>For revision or redesign details, please DM us on Instagram so the exact scope can be confirmed before work starts.',
+payment:'<b>Payment</b><br>For payment terms or a custom requirement, please DM us on Instagram. We don’t promise terms that aren’t listed on the website.',
+contact:'<b>Contact</b><br>LocalWeb handles enquiries through Instagram. <a href="'+ig+'" target="_blank" style="color:#f6c72e">DM @localwebstudio7.in →</a>',
+safety:'<b>Free Concept & privacy</b><br>The concept form asks only for basic business information. Never submit passwords, OTPs, bank/card details or sensitive personal information. The current static site does not claim to store form submissions.',
+help:'<b>I can help with</b><br>Website plans • AI Content • pricing • features • SEO • mobile experience • PWA • process • delivery • rush service • Free Website Concept • revisions • payment • contact.'
 }
 function toggleChat(){document.getElementById('chatbox').classList.toggle('open')}
 function add(text,user=false){let b=document.getElementById('chatbody');let d=document.createElement('div');d.className='msg'+(user?' user':'');d.innerHTML=text;b.appendChild(d);b.scrollTop=b.scrollHeight}
@@ -140,15 +324,23 @@ function typing(){let b=document.getElementById('chatbody');let d=document.creat
 function bot(type){add(answers[type]||answers.contact);document.getElementById('chatbody').scrollTop=document.getElementById('chatbody').scrollHeight}
 function classify(q){
  let x=q.toLowerCase();
- if(/rush|urgent|fast|express|quickly/.test(x))return'rush';
+ if(/free.*(concept|demo|preview)|concept.*free|free.*website|demo.*website/.test(x))return'concept';
+ if(/privacy|safe|secure|hack|hacker|data|information.*collect/.test(x))return'safety';
+ if(/mobile|phone|smartphone|responsive|zoom|screen|fit|cut|right side|overflow/.test(x))return'mobile';
+ if(/pwa|install|app[- ]like|mobile app/.test(x))return'pwa';
+ if(/seo|google ranking|search ranking/.test(x))return'seo';
+ if(/deliver|delivery|turnaround|how long|days|time/.test(x))return'delivery';
+ if(/rush|urgent|express|quickly|fast delivery/.test(x))return'rush';
  if(/revision|change|edit|redesign/.test(x))return'revisions';
  if(/payment|pay|advance|installment|upi/.test(x))return'payment';
  if(/contact|instagram|dm|talk|reach|book|start|enquir/.test(x))return'contact';
  if(/both|website.*content|content.*website/.test(x))return'both';
  if(/how.*work|process|steps|procedure/.test(x))return'process';
- if(/recommend|which.*plan|best.*plan|suggest|suitable|right plan/.test(x))return'recommend';
+ if(/recommend|which.*plan|best.*plan|suggest|suitable|right plan|what.*need/.test(x))return'recommend';
+ if(/feature|include|included|gallery|map|review|social|whatsapp|button/.test(x))return'features';
  if(/content|image|images|video|videos|reel|reels|monthly|499|799|1499/.test(x))return'content';
  if(/website|site|web|2499|3499|4999|price|pricing|cost|rate|package|plan/.test(x))return'website';
+ if(/help|what can you|what do you/.test(x))return'help';
  return null;
 }
 function sendChat(){
@@ -156,10 +348,31 @@ function sendChat(){
  add('<b>You:</b> '+q.replace(/[<>]/g,''),true);i.value='';
  typing();
  setTimeout(()=>{document.getElementById('typing')?.remove();let type=classify(q);
- if(type) add(answers[type]); else add('I can answer questions about LocalWeb’s <b>website plans, AI content plans, pricing, features, process, rush service and contact</b>. If your question is specific to your business, <a href="'+ig+'" target="_blank" style="color:#f6c72e">DM us on Instagram</a> and we’ll help you directly.');},500);
+ if(type) add(answers[type]); else add('I can help with <b>website plans, AI content, pricing, features, SEO, mobile/PWA, delivery, Free Website Concept, revisions and process</b>. Try asking “Which plan is best for a salon?” or <a href="'+ig+'" target="_blank" style="color:#f6c72e">DM us on Instagram</a> for a requirement specific to your business.');},500);
 }
 document.getElementById('chatinput').addEventListener('keydown',e=>{if(e.key==='Enter')sendChat()});
 document.querySelectorAll('.reveal').forEach(el=>{new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12}).observe(el)});
+
+function submitConcept(e){
+  e.preventDefault();
+  const business=document.getElementById('conceptBusiness').value.trim();
+  const type=document.getElementById('conceptType').value.trim();
+  const link=document.getElementById('conceptLink').value.trim();
+  const need=document.getElementById('conceptNeed').value;
+  const message=document.getElementById('conceptMessage').value.trim();
+  const text =
+    "Hi LocalWeb! I want to request a Free Website Concept.%0A%0A" +
+    "Business: "+encodeURIComponent(business)+"%0A" +
+    "Type: "+encodeURIComponent(type)+"%0A" +
+    (link ? "Instagram/Website: "+encodeURIComponent(link)+"%0A" : "") +
+    "Need: "+encodeURIComponent(need)+"%0A" +
+    (message ? "Details: "+encodeURIComponent(message)+"%0A" : "");
+  const result=document.getElementById('conceptResult');
+  result.classList.add('show');
+  result.innerHTML='Your concept request is ready. Instagram will open so you can send the prepared details directly to <b>@localwebstudio7.in</b>.';
+  window.open(ig, '_blank', 'noopener,noreferrer');
+}
+
 </script>
 </body>
 </html>
