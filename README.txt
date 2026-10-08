@@ -1,6 +1,6 @@
 LOCALWEB DIGITAL STUDIO WEBSITE — UPDATED
 
-This version preserves the existing website structure, pricing, sections, colours and copy except for the requested updates:
+3. Website pricing is now a single fixed ₹1,499 one-time price; Domain + Hosting are not included.
 1. The navigation/footer logo now uses ONLY the LW emblem from the newly supplied logo artwork.
 2. The hero laptop + phone preview now shows a miniature version of the actual LocalWeb website style instead of the previous generic demo card.
 3. The chatbot UI and behaviour have been upgraded to a more premium assistant with broader LocalWeb FAQ handling, typing state, better quick actions and Instagram handoff.

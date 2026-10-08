@@ -218,6 +218,258 @@ img,video,iframe{max-width:100%}
 
 </style>
 <link rel="icon" type="image/png" href="assets/localweb-lw-logo.png">
+<style>
+
+/* =========================
+   LOCALWEB PREMIUM VISUAL REFRESH
+   Content intentionally unchanged.
+   ========================= */
+:root{
+  --lw-black:#080808;
+  --lw-charcoal:#111111;
+  --lw-card:#151515;
+  --lw-yellow:#F6C72E;
+  --lw-yellow-soft:#FFE27A;
+  --lw-white:#FFFFFF;
+  --lw-muted:#B9B9B9;
+  --lw-line:rgba(255,255,255,.10);
+  --lw-glow:rgba(246,199,46,.16);
+}
+
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(circle at 82% 8%, rgba(246,199,46,.08), transparent 28%),
+    radial-gradient(circle at 10% 42%, rgba(246,199,46,.035), transparent 30%),
+    var(--lw-black) !important;
+  color:var(--lw-white);
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  background-image:
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.7),transparent 72%);
+}
+
+header, nav{
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+}
+
+section{
+  position:relative;
+}
+
+section:after{
+  content:"";
+  position:absolute;
+  left:8%;
+  right:8%;
+  bottom:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(246,199,46,.18),transparent);
+  pointer-events:none;
+}
+
+.hero{
+  background:
+    radial-gradient(circle at 75% 35%, rgba(246,199,46,.12), transparent 34%),
+    linear-gradient(135deg,#080808 0%,#101010 58%,#17130a 100%) !important;
+}
+
+.hero h1{
+  letter-spacing:-.045em;
+  text-wrap:balance;
+}
+
+.hero .accent,
+.hero .highlight,
+.yellow{
+  text-shadow:0 0 28px rgba(246,199,46,.18);
+}
+
+.btn, button, .cardbtn{
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease !important;
+}
+
+.btn:hover,.cardbtn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 28px rgba(0,0,0,.30),0 0 24px rgba(246,199,46,.10);
+}
+
+.cards{
+  width:min(1120px,92%);
+  margin:0 auto !important;
+  display:flex !important;
+  justify-content:center !important;
+  align-items:stretch !important;
+}
+
+.cards .card{
+  box-sizing:border-box;
+  width:min(720px,100%) !important;
+  margin:0 auto !important;
+  padding:34px 36px 32px !important;
+  border:1px solid rgba(246,199,46,.26) !important;
+  border-radius:24px !important;
+  background:
+    radial-gradient(circle at 92% 0%,rgba(246,199,46,.13),transparent 28%),
+    linear-gradient(145deg,#171717,#0f0f0f) !important;
+  box-shadow:
+    0 24px 70px rgba(0,0,0,.42),
+    inset 0 1px 0 rgba(255,255,255,.06),
+    0 0 0 1px rgba(246,199,46,.035);
+  position:relative;
+  overflow:hidden;
+}
+
+.cards .card:before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:3px;
+  background:linear-gradient(90deg,transparent,var(--lw-yellow),transparent);
+}
+
+.cards .card:after{
+  content:"";
+  position:absolute;
+  width:230px;
+  height:230px;
+  top:-120px;
+  right:-100px;
+  border-radius:50%;
+  background:rgba(246,199,46,.08);
+  filter:blur(2px);
+  pointer-events:none;
+}
+
+.cards .card h3{
+  font-size:clamp(2rem,4vw,3rem) !important;
+  letter-spacing:-.04em;
+  margin-top:12px !important;
+}
+
+.cards .price{
+  font-size:clamp(2.35rem,5vw,4rem) !important;
+  font-weight:800 !important;
+  letter-spacing:-.055em;
+  color:var(--lw-yellow) !important;
+  text-shadow:0 0 26px rgba(246,199,46,.12);
+  margin:12px 0 24px !important;
+}
+
+.cards .price small{
+  font-size:.26em !important;
+  letter-spacing:.18em !important;
+  color:#9f9f9f !important;
+  vertical-align:middle;
+  margin-left:8px;
+}
+
+.cards .card ul{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px 22px;
+  margin:0 !important;
+  padding:0 !important;
+  list-style:none;
+}
+
+.cards .card li{
+  position:relative;
+  padding:11px 12px 11px 30px !important;
+  border:1px solid rgba(255,255,255,.065);
+  border-radius:12px;
+  background:rgba(255,255,255,.025);
+  color:#e8e8e8;
+}
+
+.cards .card li:before{
+  content:"✓";
+  position:absolute;
+  left:11px;
+  top:10px;
+  color:var(--lw-yellow);
+  font-weight:800;
+}
+
+.cards .card p{
+  padding:12px 14px;
+  border-radius:12px;
+  background:rgba(246,199,46,.055);
+  border:1px solid rgba(246,199,46,.10);
+}
+
+.cards .popular{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:6px 11px;
+  border-radius:999px;
+  background:rgba(246,199,46,.12);
+  border:1px solid rgba(246,199,46,.25);
+  color:var(--lw-yellow);
+  font-size:.70rem;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+
+.cards .tag{
+  color:#a9a9a9 !important;
+  letter-spacing:.08em;
+}
+
+.cards .cardbtn{
+  display:inline-flex !important;
+  justify-content:center;
+  align-items:center;
+  margin-top:26px !important;
+  min-width:190px;
+  padding:14px 22px !important;
+  border-radius:12px !important;
+  background:var(--lw-yellow) !important;
+  color:#090909 !important;
+  font-weight:800 !important;
+  box-shadow:0 8px 26px rgba(246,199,46,.14);
+}
+
+.price, .tag, .popular, .cardbtn{position:relative;z-index:2}
+
+footer{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(246,199,46,.055),transparent 32%),
+    #080808 !important;
+}
+
+@media (max-width:720px){
+  .cards{width:min(94%,560px)}
+  .cards .card{
+    padding:26px 20px 24px !important;
+    border-radius:20px !important;
+  }
+  .cards .card ul{
+    grid-template-columns:1fr;
+    gap:9px;
+  }
+  .cards .card li{padding:10px 10px 10px 29px !important}
+  .cards .cardbtn{width:100%;box-sizing:border-box}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto !important;transition:none !important}
+}
+
+</style>
 </head>
 <body>
 <nav class="nav"><div class="container navin">
@@ -235,7 +487,7 @@ img,video,iframe{max-width:100%}
     <div class="sitepreview">
       <div class="pvnav"><div class="pvbrand"><img src="assets/localweb-lw-logo.png" alt=""><b>LOCALWEB</b></div><div class="pvlinks"><span>Websites</span><span>AI Content</span><span>Process</span><span>Contact</span></div><div class="pvcta">START A PROJECT</div></div>
       <div class="pvhero"><div><small>01 / DIGITAL PRESENCE</small><h3>Turn your business into a <em>professional online presence.</em></h3><p>Modern websites and high-quality AI content designed to make your business look credible and memorable.</p><div class="pvbuttons"><b>Start a Project ↗</b><span>Explore Services</span></div></div><div class="pvvisual"><div class="pvcard"><strong>BUSINESS WEBSITE</strong><b>Made to look<br>like your brand.</b><span>Mobile-first • Premium • Fast</span></div><div class="pvfloat">✦ PREMIUM</div></div></div>
-      <div class="pvstats"><span><b>₹999</b>Website starting</span><span><b>AI CONTENT</b>Monthly service</span><span><b>INSTAGRAM</b>Direct enquiry</span></div>
+      <div class="pvstats"><span><b>₹1,499</b>Website starting</span><span><b>AI CONTENT</b>Monthly service</span><span><b>INSTAGRAM</b>Direct enquiry</span></div>
     </div>
   </div>
   <div class="phone">
@@ -246,27 +498,25 @@ img,video,iframe{max-width:100%}
       <h3>Build your <em>professional</em> online presence.</h3>
       <p>Websites + AI content for modern businesses.</p>
       <div class="mcta">START A PROJECT ↗</div>
-      <div class="mfeature"><b>₹999</b><span>Website starting from</span></div>
+      <div class="mfeature"><b>₹1,499</b><span>Website starting from</span></div>
       <div class="mfeature"><b>AI CONTENT</b><span>Monthly content plans</span></div>
     </div>
   </div>
 </div>
 </div></section>
 
-<section id="web" class="section dark2"><div class="container"><div class="sectionhead reveal"><div class="eyebrow">WEBSITE DESIGN</div><h2>Your business deserves better than a basic template.</h2><p>Choose a starting point. We shape the design around your business, brand and customers.</p></div>
+<section id="web" class="section dark2"><div class="container"><div class="sectionhead reveal"><div class="eyebrow">WEBSITE DESIGN</div><h2>Your business deserves better than a basic template.</h2><p>One simple price. We shape the design around your business, brand and customers.</p></div>
 <div class="cards">
-<article class="card reveal"><div class="tag">01 / STARTER ----> Get Online</div><h3>Basic</h3><div class="price">₹999 <small>O N E - T I M E</small></div><ul><li>1-page professional website</li><li>Mobile-friendly design</li><li>Business information</li><li>WhatsApp / call-ready CTA</li><li>Google Maps & contact section</li><li>Photo gallery</li></ul><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">Ask on Instagram →</a></article>
-<article class="card pop reveal"><div class="popular">MOST POPULAR</div><div class="tag">02 / BUSINESS ----> Build Your Presence</div><h3>Business</h3><div class="price">₹1,999 <small>O N E - T I M E</small></div><ul><li>Multiple sections</li><li>Products / services showcase</li><li>Reviews / social proof</li><li>Better customization</li><li>Basic SEO setup</li><li>Social integration</li></ul><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">Ask on Instagram →</a></article>
-<article class="card reveal"><div class="tag">03 / PRO ----> Market Ready</div><h3>Elite</h3><div class="price">₹2,999 <small>O N E - T I M E</small></div><ul><li>Premium custom design</li><li>Advanced motion & interactions</li><li>Installable app-like experience</li><li>Priority customization</li><li>Conversion-focused layout</li><li>Premium visual polish</li></ul><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">Ask on Instagram →</a></article>
+<article class="card pop reveal" style="max-width:720px;margin:0 auto"><div class="tag">01 / PROFESSIONAL WEBSITE ----> Build Your Presence</div><h3>Professional Website</h3><div class="price">₹1,499 <small>ONE - TIME</small></div><ul><li>Professional website</li><li>Mobile-friendly design</li><li>Business information</li><li>WhatsApp / call-ready CTA</li><li>Google Maps & contact section</li><li>Photo gallery</li><li>Installable app-like experience</li></ul><p style="margin:14px 0 0;opacity:.78"><b>Not included:</b> Domain + Hosting</p><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">Ask on Instagram →</a></article>
 </div>
 <div class="trust reveal"><div><b>01</b>Mobile-first</div><div><b>02</b>Brand-led design</div><div><b>03</b>Clear pricing</div><div><b>04</b>Direct Instagram contact</div></div>
 </div></section>
 
 <section id="content" class="section ai"><div class="container"><div class="sectionhead reveal"><div class="eyebrow">02 / CONTENT MARKETING</div><h2>Professional product content. Made simple.</h2><p>AI-assisted visuals for Instagram, promotions, launches and WhatsApp marketing — without needing a full content team.</p></div>
 <div class="cards">
-<article class="card reveal"><div class="tag">01 / CONTENT START</div><h3>Start</h3><div class="price">₹499 <small>/ m o n t h</small></div><ul><li>6 product images</li><li>2 short videos (10 sec)</li><li>Social-ready formats</li><li>Basic support</li></ul><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">DM to Start →</a></article>
-<article class="card pop reveal"><div class="popular">MOST POPULAR</div><div class="tag">02 / CONTENT GROW</div><h3>Grow</h3><div class="price">₹799 <small>/ m o n t h</small></div><ul><li>10 product images</li><li>4 short videos</li><li>Social-ready formats</li><li>Better content variety</li></ul><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">DM to Start →</a></article>
-<article class="card reveal"><div class="tag">03 / CONTENT PRO</div><h3>Pro</h3><div class="price">₹1,499 <small>/ m o n t h</small></div><ul><li>20 product images</li><li>10 short videos</li><li>Campaign-ready variety</li><li>Priority content support</li></ul><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">DM to Start →</a></article>
+<article class="card reveal"><div class="tag">01 / CONTENT START</div><h3>Start</h3><div class="price">₹399<small>/ month</small></div><ul><li>5 product images</li><li>2 short videos </li><li>Social-media ready formats</li><li>Basic support</li></ul><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">DM to Start →</a></article>
+<article class="card pop reveal"><div class="tag">02 / CONTENT GROW</div><h3>Grow</h3><div class="price">₹699<small>/ month</small></div><ul><li>10 product images</li><li>4 short videos</li><li>Social-media ready formats</li><li>Better content variety</li></ul><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">DM to Start →</a></article>
+<article class="card reveal"><div class="tag">03 / CONTENT PRO</div><h3>Pro</h3><div class="price">₹999<small>/ month</small></div><ul><li>20 product images</li><li>8 short videos</li><li>Campaign-ready variety</li><li>Priority content support</li></ul><a class="cardbtn" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">DM to Start →</a></article>
 </div>
 <div class="rush reveal"><div><strong>⚡ Need it faster?</strong><p>Add rush delivery to any plan, anytime.</p></div><b>₹99 / image &nbsp; • &nbsp; ₹149 / video</b></div>
 <div class="features reveal"><div class="feat"><span>🚀</span>Product Launches</div><div class="feat"><span>📱</span>Instagram Posts</div><div class="feat"><span>🎬</span>Reels & Shorts</div><div class="feat"><span>✨</span>Festivals & Promos</div><div class="feat"><span>💬</span>WhatsApp Marketing</div></div>
@@ -342,29 +592,29 @@ img,video,iframe{max-width:100%}
 
 <div class="chat"><div class="chatbox" id="chatbox">
 <div class="chathead"><div class="chatidentity"><div class="chatavatar"><img src="assets/localweb-lw-logo.png" alt=""></div><div><b>LocalWeb Assistant</b><small>Business & service assistant</small><div class="online">● Online • Replies instantly</div></div></div><button class="chatclose" onclick="toggleChat()" aria-label="Close">×</button></div>
-<div class="chatbody" id="chatbody"><div class="msg">Hi! 👋 I’m the LocalWeb assistant. Ask me about <b>website plans, AI content, pricing, features, process, delivery, rush service, revisions</b> or what plan fits your business.</div><div class="quick"><button onclick="bot('website')">Website plans</button><button onclick="bot('content')">AI Content</button><button onclick="bot('recommend')">Recommend a plan</button><button onclick="bot('concept')">Free Concept</button><button onclick="bot('features')">Features</button><button onclick="bot('mobile')">Mobile</button></div></div>
+<div class="chatbody" id="chatbody"><div class="msg">Hi! 👋 I’m the LocalWeb assistant. Ask me about <b>website pricing, AI content, features, process, delivery, revisions</b> or what’s included in our website.</div><div class="quick"><button onclick="bot('website')">Website ₹1,499</button><button onclick="bot('content')">AI Content</button><button onclick="bot('recommend')">What do I get?</button><button onclick="bot('concept')">Free Concept</button><button onclick="bot('features')">Features</button><button onclick="bot('mobile')">Mobile</button></div></div>
 <div class="chatfoot"><input id="chatinput" placeholder="Ask about LocalWeb…"><button onclick="sendChat()">→</button></div></div><button class="chatbtn" onclick="toggleChat()" aria-label="Open LocalWeb Assistant">✦</button></div>
 
 <script>
 const ig='https://www.instagram.com/localwebstudio7.in/';
 const answers={
-website:'<b>Website Design</b><br>We currently offer Basic ₹999, Business ₹1,999 and Elite ₹2,999 — one-time plans. Business is a strong all-round choice for a growing business.',
-content:'<b>AI Content</b><br>Start ₹499/mo • Grow ₹799/mo • Pro ₹1,499/mo. Each plan includes the listed monthly images/videos and social-ready content.',
-both:'<b>Website + AI Content</b><br>You can combine any one-time website plan with a monthly AI Content plan. If you tell me your business type and goal, I can suggest a practical combination.',
+website:'<b>Professional Website — ₹1,499</b><br>One-time fixed price. Includes a professional website, mobile-friendly design, business information, WhatsApp / call-ready CTA, Google Maps & contact section, photo gallery and an installable app-like experience.<br><br><b>Not included:</b> Domain + Hosting.<br><a href="'+ig+'" target="_blank" style="color:#f6c72e">DM us on Instagram →</a>',
+content:'<b>AI Content</b><br>Start ₹399/mo • Grow ₹699/mo • Pro ₹999/mo. Each plan includes the listed monthly images/videos and social-ready content.',
+both:'<b>Website + AI Content</b><br>The website is ₹1,499 one-time. AI Content is a separate monthly service. You can choose either service or use both.',
 process:'<b>How it works</b><br>01 Share your business details → 02 We create → 03 You review → 04 You use/go live. The process is kept simple.',
-recommend:'<b>Quick recommendation</b><br>For a business that needs a complete professional presence, I’d usually start with <b>Business ₹1,999</b>. If you want a more premium custom experience, consider <b>Elite ₹2,999</b>. Add AI Content if you also need ongoing social content.',
+recommend:'<b>Simple recommendation</b><br>If you need a professional online presence, our website is <b>₹1,499 one-time</b> with the listed features. Domain + Hosting are not included. AI Content is a separate monthly service.',
 concept:'<b>Free Website Concept</b><br>You can request a <b>visual concept</b> before paying. It is a design preview, not a complete free website. Share basic business details through the Free Concept section, then continue the request on Instagram.',
 mobile:'<b>Mobile-first</b><br>The website is designed to work across phone, tablet and desktop. The mobile layout is built to fit the screen without requiring zoom-out.',
-features:'<b>Website features</b><br>Depending on the plan: responsive design, business information, product/service showcase, reviews/social proof, basic SEO, social integration, Google Maps/contact section and premium interactions.',
-seo:'<b>SEO</b><br>The Business plan includes basic SEO setup. For specific SEO goals or ongoing optimisation, please DM us on Instagram so the exact requirement can be confirmed.',
-pwa:'<b>Installable experience</b><br>The Elite plan includes an installable app-like experience. If you want a full PWA-style requirement, tell us what you need and we can confirm the scope on Instagram.',
+features:'<b>Website features</b><br>At ₹1,499: professional website, mobile-friendly design, business information, WhatsApp / call-ready CTA, Google Maps & contact section, photo gallery and an installable app-like experience. Domain + Hosting are not included.',
+seo:'<b>SEO</b><br>Basic website setup can be prepared for search visibility. For specific SEO goals or ongoing optimisation, please DM us on Instagram so the exact requirement can be confirmed.',
+pwa:'<b>Installable app-like experience</b><br>Yes — the ₹1,499 website includes an installable app-like experience. Domain + Hosting are separate and not included.',
 delivery:'<b>Delivery</b><br>We keep the process straightforward. Exact delivery timing depends on the project scope and how quickly the required content/details are provided, so we don’t promise a fixed timeline here.',
 rush:'<b>Rush delivery</b><br>The current site lists rush delivery as an add-on: ₹99/image and ₹149/video.',
 revisions:'<b>Revisions</b><br>For revision or redesign details, please DM us on Instagram so the exact scope can be confirmed before work starts.',
 payment:'<b>Payment</b><br>For payment terms or a custom requirement, please DM us on Instagram. We don’t promise terms that aren’t listed on the website.',
 contact:'<b>Contact</b><br>LocalWeb handles enquiries through Instagram. <a href="'+ig+'" target="_blank" style="color:#f6c72e">DM @localwebstudio7.in →</a>',
 safety:'<b>Free Concept & privacy</b><br>The concept form asks only for basic business information. Never submit passwords, OTPs, bank/card details or sensitive personal information. The current static site does not claim to store form submissions.',
-help:'<b>I can help with</b><br>Website plans • AI Content • pricing • features • SEO • mobile experience • PWA • process • delivery • rush service • Free Website Concept • revisions • payment • contact.'
+help:'<b>I can help with</b><br>Website ₹1,499 • AI Content • pricing • included features • SEO • mobile experience • installable app-like experience • process • delivery • Free Website Concept • revisions • payment • contact.'
 }
 function toggleChat(){document.getElementById('chatbox').classList.toggle('open')}
 function add(text,user=false){let b=document.getElementById('chatbody');let d=document.createElement('div');d.className='msg'+(user?' user':'');d.innerHTML=text;b.appendChild(d);b.scrollTop=b.scrollHeight}
@@ -386,8 +636,8 @@ function classify(q){
  if(/how.*work|process|steps|procedure/.test(x))return'process';
  if(/recommend|which.*plan|best.*plan|suggest|suitable|right plan|what.*need/.test(x))return'recommend';
  if(/feature|include|included|gallery|map|review|social|whatsapp|button/.test(x))return'features';
- if(/content|image|images|video|videos|reel|reels|monthly|499|799|1499/.test(x))return'content';
- if(/website|site|web|999|1999|2999|price|pricing|cost|rate|package|plan/.test(x))return'website';
+ if(/website|site|web|1499|999|1999|2999|price|pricing|cost|rate|package|plan/.test(x) && !/ai content|content plan|images?|videos?|reels?|monthly/.test(x))return'website';
+ if(/content|image|images|video|videos|reel|reels|monthly|399|699|999/.test(x))return'content';
  if(/help|what can you|what do you/.test(x))return'help';
  return null;
 }
@@ -396,7 +646,7 @@ function sendChat(){
  add('<b>You:</b> '+q.replace(/[<>]/g,''),true);i.value='';
  typing();
  setTimeout(()=>{document.getElementById('typing')?.remove();let type=classify(q);
- if(type) add(answers[type]); else add('I can help with <b>website plans, AI content, pricing, features, SEO, mobile/PWA, delivery, Free Website Concept, revisions and process</b>. Try asking “Which plan is best for a salon?” or <a href="'+ig+'" target="_blank" style="color:#f6c72e">DM us on Instagram</a> for a requirement specific to your business.');},500);
+ if(type) add(answers[type]); else add('I can help with <b>website pricing, AI content, features, SEO, mobile/PWA, delivery, Free Website Concept, revisions and process</b>. Try asking “What is included in the ₹1,499 website?” or <a href="'+ig+'" target="_blank" style="color:#f6c72e">DM us on Instagram</a> for a requirement specific to your business.');},500);
 }
 document.getElementById('chatinput').addEventListener('keydown',e=>{if(e.key==='Enter')sendChat()});
 document.querySelectorAll('.reveal').forEach(el=>{new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12}).observe(el)});
