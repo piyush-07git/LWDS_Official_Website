@@ -216,6 +216,40 @@ img,video,iframe{max-width:100%}
   .chatbox{width:calc(100vw - 12px);max-width:calc(100vw - 12px)}
 }
 
+
+/* AI CONTENT MOBILE-ONLY CARD FIT: preserve existing colours and desktop design */
+@media (max-width: 520px) {
+  /* AI Content cards: one full-width card per row on phones only. Keep original colours. */
+  #content.ai .cards {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    align-items: stretch !important;
+    gap: 14px !important;
+    width: calc(100% - 22px) !important;
+    max-width: 560px !important;
+  }
+  #content.ai .cards > .card {
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 auto;
+    width: 100% !important;
+    min-width: 0;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 22px 20px;
+    border-radius: 20px;
+    text-align: left;
+    transform: none;
+  }
+  #content.ai .cards > .card .tag { font-size: 9px; line-height: 1.5; letter-spacing: 1.25px; }
+  #content.ai .cards > .card h3 { margin: 8px 0 2px; font-size: 22px; line-height: 1.25; }
+  #content.ai .cards > .card .price { margin: 10px 0 16px; font-size: 32px; line-height: 1.2; letter-spacing: -1px; }
+  #content.ai .cards > .card .price small { font-size: 11px; letter-spacing: 0; }
+  #content.ai .cards > .card ul { gap: 10px; padding: 0; margin: 0; font-size: 12px; line-height: 1.5; }
+  #content.ai .cards > .card .cardbtn { margin-top: 20px; padding: 12px 14px; line-height: 1.35; }
+  #content.ai .cards > .card.pop { box-shadow: 0 12px 30px rgba(36,25,12,.08); }
+}
 </style>
 <link rel="icon" type="image/png" href="assets/localweb-lw-logo.png">
 <style>
@@ -474,7 +508,7 @@ footer{
 <body>
 <nav class="nav"><div class="container navin">
 <a href="#home" class="brand"><div class="logo"><img src="assets/localweb-lw-logo.png" alt="LocalWeb LW logo"></div><div class="brandtxt"><strong>LOCALWEB DIGITAL STUDIO</strong><small>⭐BUILD ONLINE. GROW OFFLINE.</small></div></a>
-<div class="links"><a href="#web">Websites</a><a href="#content">AI Content</a><a href="#concept">Free Concept</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
+<div class="links"><a href="#web">Websites</a><a href="#content">AI Content</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
 <a class="navcta" href="https://www.instagram.com/localwebstudio7.in/" target="_blank">DM ON INSTAGRAM</a>
 </div></nav>
 
@@ -527,64 +561,6 @@ footer{
 <section class="goal"><div class="container"><div class="sectionhead reveal"><div class="eyebrow">ONE STUDIO. TWO CORE SERVICES.</div><h2>Everything built around one goal: make your business look ready for growth.</h2></div><div class="goalbox"><div class="goalcard reveal"><h3>🌐 Website Design</h3><p>One-time investment. A professional digital home for your business.</p></div><div class="goalcard reveal"><h3>✦ AI Content Creator</h3><p>Monthly service. Consistent content without the complexity of a full production setup.</p></div></div></div></section>
 
 
-<section id="concept" class="concept">
-  <div class="container">
-    <div class="concept-grid">
-      <div class="concept-copy reveal">
-        <div class="eyebrow">03 / FREE WEBSITE CONCEPT</div>
-        <h2>See how your business could look online — before you pay.</h2>
-        <p>Share a few basic business details and we’ll use them to understand your brand and prepare a <b>visual website concept</b>. This is a concept preview — not a full free website.</p>
-        <div class="concept-points">
-          <div class="concept-point"><b>01</b><span><strong>Visual concept only</strong> — a homepage-style preview to show the design direction.</span></div>
-          <div class="concept-point"><b>02</b><span><strong>No payment required</strong> to request the concept.</span></div>
-          <div class="concept-point"><b>03</b><span><strong>No sensitive information</strong> — only basic business details are requested.</span></div>
-        </div>
-        <div class="concept-note">Your information should only be used for your concept request and related LocalWeb communication. Never submit passwords, OTPs, payment details or other sensitive information.</div>
-        <span class="concept-mini">✦ No full website is included in the free concept</span>
-      </div>
-
-      <form class="concept-form reveal" id="conceptForm" onsubmit="submitConcept(event)">
-        <h3>Get Your Free Concept</h3>
-        <p>Tell us a little about your business. Keep it simple.</p>
-
-        <div class="cfield">
-          <label for="conceptBusiness">Business name *</label>
-          <input id="conceptBusiness" name="business" required maxlength="80" placeholder="e.g. Sharma Bakery">
-        </div>
-
-        <div class="cfield">
-          <label for="conceptType">Business type *</label>
-          <input id="conceptType" name="type" required maxlength="60" placeholder="e.g. Bakery, Gym, Salon">
-        </div>
-
-        <div class="cfield">
-          <label for="conceptLink">Instagram / current website</label>
-          <input id="conceptLink" name="link" maxlength="160" placeholder="@yourbusiness or website link">
-        </div>
-
-        <div class="cfield">
-          <label for="conceptNeed">What do you need? *</label>
-          <select id="conceptNeed" name="need" required>
-            <option value="">Select one</option>
-            <option>Website</option>
-            <option>AI Content</option>
-            <option>Both</option>
-          </select>
-        </div>
-
-        <div class="cfield">
-          <label for="conceptMessage">Anything you want us to know?</label>
-          <textarea id="conceptMessage" name="message" maxlength="500" placeholder="Products, services, style you like, or anything important..."></textarea>
-        </div>
-
-        <button class="concept-submit" type="submit">REQUEST MY FREE CONCEPT ↗</button>
-        <div class="concept-result" id="conceptResult"></div>
-        <div class="concept-privacy">By submitting, you’re sharing basic business information for your LocalWeb concept request. No passwords, OTPs, payment details or sensitive personal data are requested.</div>
-      </form>
-    </div>
-  </div>
-</section>
-
 <section id="contact" class="contact"><div class="container reveal"><div class="eyebrow">READY WHEN YOU ARE</div><h2>Let’s build something your customers remember.</h2><p>No phone calls or complicated forms. Just send us a DM on Instagram with your business name and what you need.</p><a class="insta" href="https://www.instagram.com/localwebstudio7.in/" target="_blank"> @localwebstudio7.in &nbsp; → Send a DM</a></div></section>
 </main>
 
@@ -592,7 +568,7 @@ footer{
 
 <div class="chat"><div class="chatbox" id="chatbox">
 <div class="chathead"><div class="chatidentity"><div class="chatavatar"><img src="assets/localweb-lw-logo.png" alt=""></div><div><b>LocalWeb Assistant</b><small>Business & service assistant</small><div class="online">● Online • Replies instantly</div></div></div><button class="chatclose" onclick="toggleChat()" aria-label="Close">×</button></div>
-<div class="chatbody" id="chatbody"><div class="msg">Hi! 👋 I’m the LocalWeb assistant. Ask me about <b>website pricing, AI content, features, process, delivery, revisions</b> or what’s included in our website.</div><div class="quick"><button onclick="bot('website')">Website ₹1,499</button><button onclick="bot('content')">AI Content</button><button onclick="bot('recommend')">What do I get?</button><button onclick="bot('concept')">Free Concept</button><button onclick="bot('features')">Features</button><button onclick="bot('mobile')">Mobile</button></div></div>
+<div class="chatbody" id="chatbody"><div class="msg">Hi! 👋 I’m the LocalWeb assistant. Ask me about <b>website pricing, AI content, features, process, delivery, revisions</b> or what’s included in our website.</div><div class="quick"><button onclick="bot('website')">Website ₹1,499</button><button onclick="bot('content')">AI Content</button><button onclick="bot('recommend')">What do I get?</button><button onclick="bot('features')">Features</button><button onclick="bot('mobile')">Mobile</button></div></div>
 <div class="chatfoot"><input id="chatinput" placeholder="Ask about LocalWeb…"><button onclick="sendChat()">→</button></div></div><button class="chatbtn" onclick="toggleChat()" aria-label="Open LocalWeb Assistant">✦</button></div>
 
 <script>
